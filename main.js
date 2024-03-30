@@ -48,6 +48,8 @@ sendBtn.onclick = function(){
         console.log(res.data)
         usersGmails = res.data;
     })
+    axios.post('/send-mail', usersGmails)
+
 
 }
 
