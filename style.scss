@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+.wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    .contactContainer{
+        width: 100%;
+        height: 500px;
+        background-color: rgb(243, 71, 71);
+        color: #fff;
+        display: flex;
+        .formContainer{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            #contact{
+                display: flex;
+                flex-direction: column;
+                input{
+                    width: 320px;
+                    height: 50px;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    padding: 7px;
+                    background-color: #fff;
+                    border: none;
+                    color: rgb(243, 71, 71);
+                    outline: none;
+                    margin-bottom: 20px;
+                }
+                #sendBtn{
+                    cursor: pointer;
+                    width: 200px;
+                    height: 60px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 24px;
+                    font-weight: 700;
+                    border-radius: 20px;
+                    border: none;
+                    color: rgb(243, 71, 71);
+                    background-color: #fff;
+                    transition: 0.5s ease;
+                }
+                #sendBtn:hover{
+                    background-color: rgb(243, 71, 71);
+                    color: #fff;
+                    border: 3px #fff solid;
+                }
+            }
+        }
+        .textContainer{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 64px;
+            font-weight: 600;
+            transition: 1s ease;
+            cursor: pointer;
+        }
+    }
+}
