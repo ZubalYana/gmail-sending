@@ -1,4 +1,5 @@
 //sending the info to the bot
+let data = [];
 sendBtn.onclick = function(){
     let currentDate = new Date();
     let day = currentDate.getDate();
@@ -9,13 +10,16 @@ sendBtn.onclick = function(){
     let seconds = currentDate.getSeconds();
     let formattedDate = day + '/' + month + '/' + year + ' у ' + hours + ':' + minutes + ':' + seconds;
     console.log(formattedDate);
-    const data = {
+    const user = {
         name: userName.value,
         gmail: userGmail.value,
         time: formattedDate,
         id: Date.now(),
     }
+    data.push(user)
     console.log(data)
+    $('#userName').val('');
+    $('#userGmail').val('');
     axios.post('http://localhost:3000/send', data)
     .then((res)=>{
         console.log(res.data)
@@ -24,6 +28,7 @@ sendBtn.onclick = function(){
             userGmail.value = '';
         }
     })
+
 }
 
 //the text animation
