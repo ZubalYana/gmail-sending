@@ -35,7 +35,7 @@ sendBtn.onclick = function(){
 $('.textContainer_text').hover(
     () => {
         $('.textContainer_text').css({
-            'color': 'rgb(243, 71, 71)',
+            'color': 'rgb(128, 71, 243)',
             'background-color': '#fff',
             'font-size': '80px',
             'transition': '1s ease',
@@ -45,7 +45,7 @@ $('.textContainer_text').hover(
     () => {
         $('.textContainer_text').css({
             'color': '#fff',
-            'background-color': 'rgb(243, 71, 71)',
+            'background-color': 'rgb(128, 71, 243)',
             'font-size': '64px',
             'transition': '1s ease',
             'letter-spacing': 'normal',
