@@ -29,6 +29,14 @@ sendBtn.onclick = function(){
         }
     })
 
+    const usersGmails = [];
+    for(let el of data){
+        let email = el.gmail;
+        usersGmails.push(email);
+        console.log(usersGmails);
+    }
+
+
 }
 
 //the text animation

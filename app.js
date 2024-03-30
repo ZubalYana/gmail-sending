@@ -25,6 +25,18 @@ app.post('/send', (req, res)=>{
     })
 })
 
+app.post('/emailsSending', (req, res)=>{
+    fs.readFile('users.txt', 'utf-8', (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error reading goods data');
+        } else {
+            // const emailsData = JSON.parse(data);
+            // res.json(goodsData);
+            console.log(JSON.parse(data).gmail)
+        }
+    });
+})
 
 
 
