@@ -11,7 +11,7 @@ sendBtn.onclick = function(){
     console.log(formattedDate);
     const data = {
         name: userName.value,
-        phone: userPhone.value,
+        gmail: userGmail.value,
         time: formattedDate,
         id: Date.now(),
     }
@@ -21,7 +21,7 @@ sendBtn.onclick = function(){
         console.log(res.data)
         if(res.status == 200){
             userName.value = '';
-            userPhone.value = '';
+            userGmail.value = '';
         }
     })
 }

@@ -13,11 +13,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static(path.resolve(__dirname, './')))
 app.post('/send', (req, res)=>{
-    const { name, phone, time, id } = req.body;
+    const { name, gmail, time, id } = req.body;
     console.log(name);
-    console.log(phone);
-    bot.sendMessage(1132590035, `Новий користувач: ${name}: ${phone}. Був зареєстрований ${time}. ID: ${id}.`);
-    res.sendStatus(200);
+    console.log(gmail);
 })
 
 
