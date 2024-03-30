@@ -29,13 +29,25 @@ sendBtn.onclick = function(){
         }
     })
 
-    const usersGmails = [];
-    for(let el of data){
-        let email = el.gmail;
-        usersGmails.push(email);
-        console.log(usersGmails);
-    }
+    // const usersGmails = [];
+    // for(let el of data){
+    //     let email = el.gmail;
+    //     usersGmails.push(email);
+    //     console.log(usersGmails);
+    // }
 
+    // axios.post('http://localhost:3000/gmails', usersGmails)
+    // .then((res)=>{
+    //     console.log(res.data)
+
+    // })
+    let usersGmails = [];
+
+    axios.post('http://localhost:3000/emailsSending')
+    .then((res)=>{
+        console.log(res.data)
+        usersGmails = res.data;
+    })
 
 }
 

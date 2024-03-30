@@ -29,11 +29,11 @@ app.post('/emailsSending', (req, res)=>{
     fs.readFile('users.txt', 'utf-8', (err, data) => {
         if (err) {
             console.error(err);
-            res.status(500).send('Error reading goods data');
+            res.status(500).send('Error reading gmails data');
         } else {
-            // const emailsData = JSON.parse(data);
-            // res.json(goodsData);
-            console.log(JSON.parse(data).gmail)
+            const users = JSON.parse(data);
+            const usersGmails = users.map(user => user.gmail);
+            res.send(usersGmails);
         }
     });
 })
