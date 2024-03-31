@@ -49,8 +49,8 @@ app.post('/emailsSending', (req, res)=>{
                 console.log(req.body);
                 let mailOptions = {
                   from: 'Лист від Яни',
-                  to: req.body.user,
-                  subject: 'Високоінтелектуально',
+                  to: usersGmails,
+                  subject: 'Hello!',
                   text: req.body.message,
                 };
               
